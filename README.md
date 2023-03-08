@@ -9,4 +9,3 @@ The training wheels are off, but you're not alone. This project is purposely ope
 1. Before changing anything, explore the code. If you do change anything, change it back. What works? What doesn't work?
 1. List all the features you expect from a basic todo app. I wish there was an app we could check features off as we complete them...
 1. Add the features, and don't be afraid to ask for help!
-
