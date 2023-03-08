@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Todo } from './Todo';
 
 export const TodoInput = (props) => {
   const [text, setText] = useState('');
