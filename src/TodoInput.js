@@ -9,13 +9,13 @@ export const TodoInput = (props) => {
 
   return (
     <form onSubmit={onSubmit}>
-      <label for="new-todo" class="form-label">
+      <label for="new-todo" className="form-label">
         Create todo
       </label>
 
-      <div class="input-group">
-        <input id="new-todo" class="form-control" value={text} />
-        <button type="submit" class="btn btn-primary">
+      <div className="input-group">
+        <input id="new-todo" className="form-control" value={text} />
+        <button type="submit" className="btn btn-primary">
           create
         </button>
       </div>

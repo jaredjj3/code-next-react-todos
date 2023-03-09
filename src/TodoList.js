@@ -8,9 +8,9 @@ export const TodoList = (props) => {
     <div>
       <h2>Todos</h2>
 
-      <ul class="list-group" style={{ cursor: 'pointer' }}>
+      <ul className="list-group" style={{ cursor: 'pointer' }}>
         {todos.map((todo) => (
-          <li class="list-group-item">
+          <li className="list-group-item">
             <TodoListItem key={todo.id} todo={todo} />
           </li>))}
       </ul>

@@ -17,9 +17,9 @@ export const TodoListItem = (props) => {
 
   // There might be a bug in this template...
   return (
-    <div class="d-flex justify-content-between" style={{ textDecoration }}>
+    <div className="d-flex justify-content-between" style={{ textDecoration }}>
       {todo.text}
-      <button class="btn btn-primary btn-sm" onClick={onClick}>
+      <button className="btn btn-primary btn-sm" onClick={onClick}>
         {buttonText}
       </button>
     </div>

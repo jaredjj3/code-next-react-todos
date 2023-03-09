@@ -10,13 +10,13 @@ export const TodoList = (props) => {
       <h2>Todos</h2>
 
       {todos.length === 0 ? (
-        <div class="d-flex justify-content-evenly">
+        <div className="d-flex justify-content-evenly">
           <h3>You're all caught up!</h3>
         </div>
       ) : (
-        <ul class="list-group" style={{ cursor: 'pointer' }}>
+        <ul className="list-group" style={{ cursor: 'pointer' }}>
           {todos.map((todo) => (
-            <li class="list-group-item">
+            <li className="list-group-item">
               <TodoListItem key={todo.id} todo={todo} onUpdate={onUpdate} />
             </li>
           ))}

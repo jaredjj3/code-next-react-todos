@@ -28,7 +28,7 @@ export default function App() {
   };
 
   return (
-    <div class="container">
+    <div className="container">
       <h1>My Todo App</h1>
 
       <TodoInput onCreate={onCreate} />
@@ -39,9 +39,9 @@ export default function App() {
 
       <br />
 
-      <div class="d-flex justify-content-evenly">
+      <div className="d-flex justify-content-evenly">
         <button
-          class="btn btn-outline-danger"
+          className="btn btn-outline-danger"
           disabled={todos.every((t) => !t.done)}
           onClick={onRemoveDoneClick}
         >

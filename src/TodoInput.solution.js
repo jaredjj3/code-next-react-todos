@@ -24,18 +24,18 @@ export const TodoInput = (props) => {
 
   return (
     <form onSubmit={onSubmit}>
-      <label for="new-todo" class="form-label">
+      <label for="new-todo" className="form-label">
         Create todo
       </label>
 
-      <div class="input-group">
+      <div className="input-group">
         <input
           id="new-todo"
-          class="form-control"
+          className="form-control"
           value={text}
           onChange={onChange}
         />
-        <button type="submit" class="btn btn-primary" disabled={!text}>
+        <button type="submit" className="btn btn-primary" disabled={!text}>
           create
         </button>
       </div>

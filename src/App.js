@@ -13,7 +13,7 @@ export default function App() {
   const [todos, setTodos] = useState(INITIAL_TODOS);
 
   return (
-    <div class="container">
+    <div className="container">
       <h1>My Todo App</h1>
 
       <TodoInput />
