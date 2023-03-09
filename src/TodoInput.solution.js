@@ -12,10 +12,14 @@ export const TodoInput = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    if (!text) {
+      return;
+    }
     if (onCreate) {
       const todo = Todo.create(text);
       onCreate(todo);
     }
+    setText('');
   };
 
   return (
@@ -31,7 +35,7 @@ export const TodoInput = (props) => {
           value={text}
           onChange={onChange}
         />
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-primary" disabled={!text}>
           create
         </button>
       </div>

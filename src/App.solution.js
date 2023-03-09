@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo } from 'react';
 import { TodoInput } from './TodoInput';
 import { TodoList } from './TodoList';
 import { Todo } from './Todo';
@@ -11,7 +11,7 @@ const INITIAL_TODOS = [
 ];
 
 export default function App() {
-  const [todos, setTodos] = useLocalStorage('todos', INITIAL_TODOS);
+  const [todos, setTodos] = useLocalStorageTodos();
 
   const onCreate = (todo) => {
     setTodos((todos) => [...todos.map((t) => t.copy()), todo]);
@@ -40,10 +40,31 @@ export default function App() {
       <br />
 
       <div class="d-flex justify-content-evenly">
-        <button class="btn" onClick={onRemoveDoneClick}>
+        <button
+          class="btn btn-outline-danger"
+          disabled={todos.every((t) => !t.done)}
+          onClick={onRemoveDoneClick}
+        >
           remove done todos
         </button>
       </div>
     </div>
   );
 }
+
+const useLocalStorageTodos = () => {
+  const [json, setJson] = useLocalStorage(
+    'todos',
+    INITIAL_TODOS.map((t) => t.toJSON())
+  );
+
+  // We need to cache the array to prevent infinite re-renders.
+  const todos = useMemo(() => json.map((o) => Todo.fromJSON(o)), [json]);
+
+  const setTodos = (update) => {
+    const nextJson = update(todos).map((t) => t.toJSON());
+    setJson(nextJson);
+  };
+
+  return [todos, setTodos];
+};
