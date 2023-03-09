@@ -6,12 +6,14 @@ export const TodoListItem = (props) => {
 
   const textDecoration = done ? 'line-through' : undefined;
 
+  // There might be a bug in this template...
   return (
-    <li
-      class="list-group-item list-group-item-action"
+    <div
+      class="d-flex justify-content-between"
       style={{ textDecoration }}
     >
       {todo.text}
-    </li>
+      <button class="btn btn-primary btn-sm">done</button>
+    </div>
   );
 };

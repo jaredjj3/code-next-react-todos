@@ -9,7 +9,10 @@ export const TodoList = (props) => {
       <h2>Todos</h2>
 
       <ul class="list-group" style={{ cursor: 'pointer' }}>
-        {todos.map((todo) => <TodoListItem key={todo.id} todo={todo} />)}
+        {todos.map((todo) => (
+          <li class="list-group-item">
+            <TodoListItem key={todo.id} todo={todo} />
+          </li>))}
       </ul>
     </div>
   );
