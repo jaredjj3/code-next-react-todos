@@ -2,6 +2,8 @@
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-mu8c1c)
 
+A lesson for the [Code Next](https://codenext.withgoogle.com/) React club.
+
 In this lesson, engineers will used everything they've learned about React to create a basic todo app.
 
 The training wheels are off, but you're not alone. This project is purposely open ended so you can get used to navigating ambiguity.
