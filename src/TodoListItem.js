@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export const TodoListItem = (props) => {
-  const [done, setDone] = useState(false);
   const todo = props.todo;
 
-  const textDecoration = done ? 'line-through' : undefined;
+  const textDecoration = todo.done ? 'line-through' : undefined;
+  const buttonText = todo.done ? 'undo' : 'done';
 
   // There might be a bug in this template...
   return (
@@ -13,7 +13,7 @@ export const TodoListItem = (props) => {
       style={{ textDecoration }}
     >
       {todo.text}
-      <button class="btn btn-primary btn-sm">done</button>
+      <button class="btn btn-primary btn-sm">{buttonText}</button>
     </div>
   );
 };
